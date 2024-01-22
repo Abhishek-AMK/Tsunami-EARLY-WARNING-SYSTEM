@@ -1,27 +1,28 @@
-# Tsunami-Alert-System
-Tsunami Alert System based on Satellite imagery (Smart India Hackathon project) 
+# Tsunami-Early-Warning-System
+
+Tsunami Early Warning System based on Satellite imagery 
 
 We have taken the source of satellite imagery as the indian oceanographic site  
 [Source site](https://www.incois.gov.in/portal/osf/osfCoastal.jsp?region=coastal&area=westbengal&param=swh&ln=en)
 
-Source image:<br/>
+## Source image:<br/>
 ![alt text](https://github.com/sidvsukhi/Tsunami-Alert-System/blob/master/util/seawaves.JPG "MH sea waves")
 
 The project comprises of 2 components for alerting the Tsunami:- 
 1. The image processing part which is based on image processing on the web scrapped image from the source site. It detects the tsunami tides using color analysis. The colors of waves basically represent the height of the sea waves. An alert is generated for tsunami whenever a yellow color (height of sea waves=3m) and beyond are used to show the sea waves.  
 2. The Machine learning part which recognizes the probability of tsunamis caused due to remote earthquakes. The basic condition for an earthquake to cause Tsunami are that the depth of earthquake should be less than 70km and minimum Ritcher scale magnitude of 7.5 
 
-Workflow:<br/>
+## Workflow:<br/>
 ![alt text](https://github.com/sidvsukhi/Tsunami-Alert-System/blob/master/util/workflow.JPG "Project workflow")
 
-Prerequisites-
+## Prerequisites-
 1. smtp lib
 2. openCV lib
 3. extcolors
 4. pyrebase
 5. twilio
 
-How to use the repository?
+## How to use the repository?
 1. flaskml/theapp- The website along with the ML part
 2. Earthquake.csv- The dataset used for classification
 3. Tsunami DA.py- The code for preprocessing and Random Forest implementation on dataset 
